@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+  background: linear-gradient(to right, #e53935, #e35d5b);
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     line-height:5rem;
+}
+
+.start{
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    padding: 1rem; 
+    border-radius: 10px;
+    color: #fff;
+    font-size: large;
+    box-shadow: 5px 5px 5px black;
+}
+.game{
+    background: linear-gradient(to right, #7474bf, #348ac7);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box{
+    background: linear-gradient(to right, #ff8008, #ffc837);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 40%;
+    height: 90%;
+    padding:0 20px;
+}
+.card-inner img{
+    height: 100%;
+    width: 100%;
+   
+}
+
+.card {
+    background-color: transparent;
+    width: 120px;
+    height: 150px;
+    perspective: 1000px;
+    
+  }
+  .matched{
+    pointer-events: none;
+    visibility: hidden;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  .card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .score{
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .score h1{
+    color: white;
+  }
+  .score button{
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: #ffc837;
+    font-size: 22px;
+    box-shadow: 5px 5px 5px white;
+  }
+  .moves{
+    background-color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+  .score h2 span{
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+  }
+  .score h2{
+    line-height: 3rem;
+  }
+ 
+  @media all and (max-width: 1000px) {
+    .box{
+      width: 70%;
+      height: 70%;
+    }
+  }
+  @media all and (max-width: 650px) {
+    .box{
+      width: 90%;
+      height: 90%;
+    }
+    .card {
+      width: 100px;
+      height: 120px;
+      
+    }
+    .score{
+     padding: 2.5rem;
+    }
+  }
+  @media all and (max-width: 400px) {
+    .card {
+      width: 80px;
+      height: 100px;
+      
+    }
+  }
+  
+  
